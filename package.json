@@ -1,0 +1,23 @@
+{
+        "name": "boundary-plugin-process-running",
+        "version": "0.1.0",
+        "private": true,
+        "description": "Checks to see how many processes are running",
+        "main": "process.js",
+        "devDependencies": {},
+        "repository": {
+        "type": "git",
+        "url": "https://github.com/djbarber/boundary-plugin-process-running"
+        },
+        "keywords": [
+                "boundary",
+                "plugin",
+                "process"
+        ],
+        "author": "dan.barber@avid.com",
+        "license": "Apache v2",
+        "bugs": {
+                "url": "https://github.com/djbarber/boundary-plugin-process-running/issues"
+        },
+        "engine": "node >= 0.10.32"
+}
