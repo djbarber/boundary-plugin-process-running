@@ -15,6 +15,7 @@ function numProcessRunning(processName){
 	child = exec("ps -ef | grep splunk | wc -l", function (error, stdout, stderr) {
         var proc = stdout - 2;
 	var host = processName + "-" + _source;
+	_source = host
         console.log('BOUNDARY_PROCESS_RUNNING %d %s', proc, host);
 	});
 }
