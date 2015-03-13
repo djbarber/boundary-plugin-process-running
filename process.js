@@ -4,10 +4,12 @@ var sys = require('sys')
 var exec = require('child_process').exec;
 var child;
 
+var pollInterval = _param.pollInterval || 1000;
+var processes = _param.processes;
+
 var _os = require('os');
 var _source = _os.hostname();
 
-var _interval = parseInt(process.argv[1]) || 1000;
 
 function numProcessRunning(processName){
 	child = exec("ps -ef | grep splunk | wc -l", function (error, stdout, stderr) {
@@ -27,4 +29,4 @@ var _last; function poll()
 	setTimeout(poll, _interval)
 }
 
-setInterval(poll, pollInterval);
+setInterval(poll, _interval);
