@@ -4,7 +4,7 @@ var sys = require('sys')
 var exec = require('child_process').exec;
 var child;
 
-var pollInterval = _param.pollInterval || 1000;
+var pollInterval = _param.pollInterval || 3000;
 var processes = _param.processes;
 
 var _os = require('os');
@@ -20,7 +20,7 @@ function numProcessRunning(processName){
 }
 
 
-var _last; function poll()
+function poll()
 {
 	for(var i = 0; i < processes.length; i++)
 	{
