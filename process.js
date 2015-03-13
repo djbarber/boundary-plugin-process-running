@@ -12,10 +12,11 @@ var _source = _os.hostname();
 
 
 function numProcessRunning(processName){
-	child = exec("ps -ef | grep splunk | wc -l", function (error, stdout, stderr) {
+	var searchCommand = "ps -ef | grep " + processName + " | wc -l";
+	child = exec(searchCommand, function (error, stdout, stderr) {
         var proc = stdout - 2;
 	var host = processName + "-" + _source;
-        console.log('BOUNDARY_PROCESS_RUNNING %d %s %s', proc, host, processName);
+        console.log('BOUNDARY_PROCESS_RUNNING %d %s', proc, host);
 	});
 }
 
