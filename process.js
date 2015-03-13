@@ -26,7 +26,7 @@ var _last; function poll()
 	{
 		numProcessRunning(processes[i]);
 	}
-	setTimeout(poll, _interval)
+	setTimeout(poll, pollInterval)
 }
 
-setInterval(poll, _interval);
+setInterval(poll, pollInterval);
