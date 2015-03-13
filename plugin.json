@@ -1,0 +1,18 @@
+{
+    "description" : "Checks that any given processes are running",
+    "icon" : "icon.png",
+    "command" : "node process.js $(pollInterval) $(processes)",
+    "postExtract" : "npm install",
+    "ignore" : "node_modules",
+    "metrics" : ["BOUNDARY_PROCESS_RUNNING"],
+    "paramSchema" : [
+        {
+            "title" : "processes",
+            "description" : "Processes to check that are running",
+            "type" : "array",
+            "items" : {
+                "type" : "string"
+            }
+        }
+    ]
+}
