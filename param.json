@@ -1,0 +1,8 @@
+{
+  "processes":[
+	"splunk",
+	"boundary-meter",
+	"Chrome"
+  ],
+  "pollInterval":3000
+}
