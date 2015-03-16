@@ -14,7 +14,7 @@ var _source = _os.hostname();
 function numProcessRunning(processName){
 	var searchCommand = "ps -ef | grep " + processName + " | wc -l";
 	child = exec(searchCommand, function (error, stdout, stderr) {
-        var proc = stdout - 2;
+        var proc = stdout - 3;
 	var host = processName + "-" + _source;
         console.log('BOUNDARY_PROCESS_RUNNING %d %s', proc, host);
 	});
