@@ -1,0 +1,14 @@
+{
+    "result": [
+        {
+            "defaultAggregate": "MAX",
+            "defaultResolutionMS": 0,
+            "description": "Process Running",
+            "displayName": "Process Running",
+            "displayNameShort": "Process Running",
+            "isDisabled": 0,
+            "name": "BOUNDARY_PROCESS_RUNNING",
+            "unit": "number"
+        }
+    ]
+}
